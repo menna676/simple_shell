@@ -108,11 +108,11 @@ int isdelimiter(char, char *);
 int isalphabetic(int);
 int stringtoint(char *);
 
-int displayHistory(info_t *info);
-int Remove_alias(info_t *info, char *str);
-int set_shellAlias(info_t *info, char *str);
-int print_shellAlias(list_t *node);
-int shellAlias(info_t *info);
+int displayHistory(info_t *);
+int Remove_alias(info_t *, char *);
+int set_shellAlias(info_t *, char *);
+int print_shellAlias(list_t *);
+int shellAlias(info_t *);
 
 size_t getList_leng(const list_t *);
 char **LLtoStrings(list_t *);
@@ -132,8 +132,8 @@ int populateenvironL(info_t *);
 
 void errorprints(char *);
 int errorprintchar(char);
-int printfd(char n, int fid);
-int printfds(char *str, int fid);
+int printfd(char , int);
+int printfds(char *, int);
 
 int errorstringtoint(char *);
 void printerrormes(info_t *, char *);
@@ -148,5 +148,11 @@ void freenfstruct(info_t *, int);
 char *StringCopy(char *, char *, int);
 char *StringConcat(char *, char *, int);
 char *StringCharac(char *, char);
+
+ssize_t BufferInput(info_t *, char **, size_t *);
+ssize_t GETin(info_t *);
+ssize_t ReadBuffer(info_t *, char *, size_t *);
+int GetNextli(info_t *, char **, size_t *);
+void handleSigint(int);
 
 #endif
