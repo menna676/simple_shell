@@ -39,7 +39,7 @@ if (info->argc != 3)
 errorprints("Incorrect numb of arguments\n");
 return (1);
 }
-if (_setenv(info, info->argv[1], info->argv[2]))
+if (SETEnviron(info, info->argv[1], info->argv[2]))
 return (0);
 return (1);
 }
@@ -58,7 +58,7 @@ return (1);
 }
 while (i <= info->argc)
 {
-_unsetenv(info, info->argv[i]);
+UnSetEnviron(info, info->argv[i]);
 i++;
 }
 return (0);

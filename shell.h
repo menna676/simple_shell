@@ -157,6 +157,6 @@ void handleSigint(int);
 
 char **GETEnvironment(info_t *);
 int UnSetEnviron(info_t *, char *);
-int (SETEnvironinfo_t *, char *, char *);
+int SETEnviron(info_t *, char *, char *);
 
 #endif

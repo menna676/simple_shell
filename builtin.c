@@ -67,8 +67,8 @@ errorprints(info->argv[1]), errorprintchar('\n');
 }
 else
 {
-_setenv(info, "OLDPWD", getenvironment(info, "PWD="));
-_setenv(info, "PWD", getcwd(buffer, 1024));
+SETEnviron(info, "OLDPWD", getenvironment(info, "PWD="));
+SETEnviron(info, "PWD", getcwd(buffer, 1024));
 }
 return (0);
 }
