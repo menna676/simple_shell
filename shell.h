@@ -155,4 +155,8 @@ ssize_t ReadBuffer(info_t *, char *, size_t *);
 int GetNextli(info_t *, char **, size_t *);
 void handleSigint(int);
 
+char **GETEnvironment(info_t *);
+int UnSetEnviron(info_t *, char *);
+int (SETEnvironinfo_t *, char *, char *);
+
 #endif
