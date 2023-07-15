@@ -159,4 +159,10 @@ char **GETEnvironment(info_t *);
 int UnSetEnviron(info_t *, char *);
 int SETEnviron(info_t *, char *, char *);
 
+char *GETHisto(info_t *info);
+int WHistofile(info_t *info);
+int RHisto(info_t *info);
+int PHistoL(info_t *info, char *buff, int linecount);
+int RNHist(info_t *info);
+
 #endif

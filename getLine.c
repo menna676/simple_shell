@@ -29,7 +29,7 @@ b--;
 }
 info->linecount_flag = 1;
 remcom(*buff);
-build_history_list(info, *buff, info->histcount++);
+PHistoL(info, *buff, info->histcount++);
 /* check if *buf contains a command chain ";". If so, buff the commands */
 if (StringCharac(*buff, ';'))
 {
