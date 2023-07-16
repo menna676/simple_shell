@@ -54,11 +54,11 @@ if (all)
 if (!info->cmd_buf)
 free(info->arg);
 if (info->env)
-free_list(&(info->env));
+FreeLL(&(info->env));
 if (info->history)
-free_list(&(info->history));
+FreeLL(&(info->history));
 if (info->alias)
-free_list(&(info->alias));
+FreeLL(&(info->alias));
 ffree(info->environ);
 info->environ = NULL;
 bfree((void **)info->cmd_buf);

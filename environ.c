@@ -6,7 +6,7 @@
 */
 int Myenvironment(info_t *info)
 {
-print_list_str(info->env);
+PstringL(info->env);
 return (0);
 }
 /**
@@ -74,7 +74,7 @@ list_t *NODE = NULL;
 size_t x = 0;
 while (environ[x])
 {
-add_node_end(&NODE, environ[x], 0);
+ANodeE(&NODE, environ[x], 0);
 x++;
 }
 info->env = NODE;

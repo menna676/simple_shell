@@ -31,7 +31,7 @@ for (i = 0; Node; i++)
 s = starts_with(Node->str, vari);
 if (s && *s == '=')
 {
-info->env_changed = delete_node_at_index(&(info->env), i);
+info->env_changed = DNodeI(&(info->env), i);
 i = 0;
 Node = info->env;
 continue;
@@ -72,7 +72,7 @@ info->env_changed = 1;
 return (0);
 }
 }
-add_node_end(&(info->env), buff, 0);
+ANodeE(&(info->env), buff, 0);
 free(buff);
 info->env_changed = 1;
 return (0);

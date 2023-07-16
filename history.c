@@ -87,7 +87,7 @@ PHistoL(info, buff + last, linecount++);
 free(buff);
 info->histcount = linecount;
 while (info->histcount-- >= Hist_Maxim)
-delete_node_at_index(&(info->history), 0);
+DNodeI(&(info->history), 0);
 RNHist(info);
 return (info->histcount);
 }
@@ -103,7 +103,7 @@ int PHistoL(info_t *info, char *buff, int linecount)
 list_t *Node = NULL;
 if (info->history)
 Node = info->history;
-add_node_end(&Node, buff, linecount);
+ANodeE(&Node, buff, linecount);
 if (!info->history)
 info->history = Node;
 return (0);
@@ -116,10 +116,11 @@ return (0);
 int RNHist(info_t *info)
 {
 list_t *Node = info->history;
-int i;
-for (i = 0; Node; i++, Node = Node->next)
+int i = 0;
+while (Node)
 {
 Node->numb = i++;
+Node = Node->next;
 }
 return (info->histcount = i);
 }

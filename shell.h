@@ -132,7 +132,7 @@ int populateenvironL(info_t *);
 
 void errorprints(char *);
 int errorprintchar(char);
-int printfd(char , int);
+int printfd(char, int);
 int printfds(char *, int);
 
 int errorstringtoint(char *);
@@ -164,5 +164,11 @@ int WHistofile(info_t *info);
 int RHisto(info_t *info);
 int PHistoL(info_t *info, char *buff, int linecount);
 int RNHist(info_t *info);
+
+list_t *Node_start(list_t **, const char *, int);
+list_t *ANodeE(list_t **, const char *, int);
+size_t PstringL(const list_t *);
+int DNodeI(list_t **, unsigned int);
+void FreeLL(list_t **);
 
 #endif

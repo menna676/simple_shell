@@ -25,7 +25,7 @@ if (!s)
 return (1);
 n = *s;
 *s = '\0';
-ret = delete_node_at_index(&(info->alias),
+ret = DNodeI(&(info->alias),
 getIndexofNode(info->alias, NodewithPrefix(info->alias, str, -1)));
 *s = n;
 return (ret);
@@ -45,7 +45,7 @@ return (1);
 if (!*++s)
 return (Remove_alias(info, str));
 Remove_alias(info, str);
-return (add_node_end(&(info->alias), str, 0) == NULL);
+return (ANodeE(&(info->alias), str, 0) == NULL);
 }
 /**
 * print_shellAlias - print the contents of a shell alias
