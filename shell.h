@@ -171,4 +171,14 @@ size_t PstringL(const list_t *);
 int DNodeI(list_t **, unsigned int);
 void FreeLL(list_t **);
 
+int Freepointer(void **);
+
+int executablecommand(info_t *, char *);
+char *duplicateChar(char *, int, int);
+char *FcommandP(info_t *, char *, char *);
+
+char *Setmemory(char *, char, unsigned int);
+void Fstring(char **);
+void *memoryReallocate(void *, unsigned int, unsigned int);
+
 #endif
