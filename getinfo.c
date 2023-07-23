@@ -46,7 +46,7 @@ replace_vars(info);
 */
 void freenfstruct(info_t *info, int all)
 {
-ffree(info->argv);
+Fstring(info->argv);
 info->argv = NULL;
 info->path = NULL;
 if (all)
@@ -59,9 +59,9 @@ if (info->history)
 FreeLL(&(info->history));
 if (info->alias)
 FreeLL(&(info->alias));
-ffree(info->environ);
+Fstring(info->environ);
 info->environ = NULL;
-bfree((void **)info->cmd_buf);
+Freepointer((void **)info->cmd_buf);
 if (info->readfd > 2)
 close(info->readfd);
 _putchar(Buff_flush);
