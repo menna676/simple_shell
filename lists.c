@@ -14,7 +14,7 @@ return (NULL);
 N_head = malloc(sizeof(list_t));
 if (!N_head)
 return (NULL);
-_memset((void *)N_head, 0, sizeof(list_t));
+Setmemory((void *)N_head, 0, sizeof(list_t));
 N_head->numb = numb;
 if (str)
 {
@@ -45,7 +45,7 @@ Node = *head;
 new_Node = malloc(sizeof(list_t));
 if (!new_Node)
 return (NULL);
-_memset((void *)new_Node, 0, sizeof(list_t));
+Setmemory((void *)new_Node, 0, sizeof(list_t));
 new_Node->numb = numb;
 if (str)
 {
