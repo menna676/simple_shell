@@ -119,7 +119,7 @@ if (b == -1 || (b == 0 && leng == 0))
 return (-1);
 n = StringCharac(buff + i, '\n');
 k = n ? 1 + (unsigned int)(n - buff) : leng;
-new_s = _realloc(s, p, p ? p + k : k + 1);
+new_s = memoryReallocate(s, p, p ? p + k : k + 1);
 if (!new_s)
 return (s ? free(s), -1 : -1);
 if (p)
