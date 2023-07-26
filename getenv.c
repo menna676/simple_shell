@@ -28,7 +28,7 @@ if (!Node || !vari)
 return (0);
 for (i = 0; Node; i++)
 {
-s = starts_with(Node->str, vari);
+s = Beginstr(Node->str, vari);
 if (s && *s == '=')
 {
 info->env_changed = DNodeI(&(info->env), i);
@@ -54,16 +54,16 @@ list_t *Node;
 char *s;
 if (!vari || !val)
 return (0);
-buff = malloc(_strlen(vari) + _strlen(val) + 2);
+buff = malloc(StringLength(vari) + StringLength(val) + 2);
 if (!buff)
 return (1);
 _strcpy(buff, vari);
-_strcat(buff, "=");
-_strcat(buff, val);
+Stringcon(buff, "=");
+Stringcon(buff, val);
 Node = info->env;
 for (; Node; Node = Node->next)
 {
-s = starts_with(Node->str, vari);
+s = Beginstr(Node->str, vari);
 if (s && *s == '=')
 {
 free(Node->str);

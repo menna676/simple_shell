@@ -49,7 +49,7 @@ int i = 0, curr_pos = 0;
 char *path;
 if (!pathstr)
 return (NULL);
-if (_strlen(cmd) > 2 && starts_with(cmd, "./"))
+if (StringLength(cmd) > 2 && Beginstr(cmd, "./"))
 {
 if (executablecommand(info, cmd))
 return (cmd);
@@ -59,11 +59,11 @@ if (!pathstr[i] || pathstr[i] == ':')
 {
 path = duplicateChar(pathstr, curr_pos, i);
 if (!*path)
-_strcat(path, cmd);
+Stringcon(path, cmd);
 else
 {
-_strcat(path, "/");
-_strcat(path, cmd);
+Stringcon(path, "/");
+Stringcon(path, cmd);
 }
 if (executablecommand(info, path))
 return (path);

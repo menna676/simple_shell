@@ -21,7 +21,7 @@ list_t *Node = info->env;
 char *s;
 for (; Node; Node = Node->next)
 {
-s = starts_with(Node->str, name);
+s = Beginstr(Node->str, name);
 if (s && *s)
 return (s);
 }

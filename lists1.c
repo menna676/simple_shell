@@ -33,7 +33,7 @@ return (NULL);
 i = 0;
 while (Node)
 {
-str = malloc(_strlen(Node->str) + 1);
+str = malloc(StringLength(Node->str) + 1);
 if (!str)
 {
 for (j = 0; j < i; j++)
@@ -79,7 +79,7 @@ list_t *NodewithPrefix(list_t *Node, char *pref, char n)
 char *s = NULL;
 for (; Node; Node = Node->next)
 {
-s = starts_with(Node->str, pref);
+s = Beginstr(Node->str, pref);
 if (s && ((n == -1) || (*s == n)))
 return (Node);
 }

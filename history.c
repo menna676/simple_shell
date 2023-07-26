@@ -10,13 +10,13 @@ char *buff, *dir;
 dir = getenvironment(info, "HOME=");
 if (!dir)
 return (NULL);
-buff = malloc(sizeof(char) * (_strlen(dir) + _strlen(Hist_Fi) + 2));
+buff = malloc(sizeof(char) * (StringLength(dir) + StringLength(Hist_Fi) + 2));
 if (!buff)
 return (NULL);
 buff[0] = 0;
 _strcpy(buff, dir);
-_strcat(buff, "/");
-_strcat(buff, Hist_Fi);
+Stringcon(buff, "/");
+Stringcon(buff, Hist_Fi);
 return (buff);
 }
 /**

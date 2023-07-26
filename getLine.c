@@ -73,7 +73,7 @@ i = leng = 0;
 info->cmd_buf_type = CMD_norms;
 }
 *buff_s = s;
-return (_strlen(s)); /* Returns curr command leng*/
+return (StringLength(s)); /* Returns curr command leng*/
 }
 *buff_s = buff;
 return (b); /* Returns buff leng BufferInput() */

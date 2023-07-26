@@ -45,7 +45,7 @@ chdir((dirc = getenvironment(info, "PWD=")) ? dirc : "/");
 else
 chdir_ret = chdir(dirc);
 }
-else if (_strcmp(info->argv[1], "-") == 0)
+else if (StringCompare(info->argv[1], "-") == 0)
 {
 if (!getenvironment(info, "OLDPWD="))
 {

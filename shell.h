@@ -181,5 +181,14 @@ char *Setmemory(char *, char, unsigned int);
 void Fstring(char **);
 void *memoryReallocate(void *, unsigned int, unsigned int);
 
+int StringLength(char *);
+int StringCompare(char *, char *);
+char *Beginstr(const char *, const char *);
+char *Stringcon(char *, char *);
+
+char *Stringcop(char *, char *);
+char *DuplicateString(const char *);
+void PrintString(char *);
+int WriteCharacter(char);
 
 #endif
