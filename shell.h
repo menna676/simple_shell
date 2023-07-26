@@ -191,4 +191,7 @@ char *DuplicateString(const char *);
 void PrintString(char *);
 int WriteCharacter(char);
 
+char **splitstr(char *, char *);
+char **splitstr2(char *, char);
+
 #endif
