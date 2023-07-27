@@ -8,7 +8,7 @@ char **GETEnvironment(info_t *info)
 {
 if (!info->environ || info->env_changed)
 {
-info->environ = list_to_strings(info->env);
+info->environ = LLtoStrings(info->env);
 info->env_changed = 0;
 }
 return (info->environ);
@@ -57,7 +57,7 @@ return (0);
 buff = malloc(StringLength(vari) + StringLength(val) + 2);
 if (!buff)
 return (1);
-_strcpy(buff, vari);
+Stringcop(buff, vari);
 Stringcon(buff, "=");
 Stringcon(buff, val);
 Node = info->env;

@@ -18,7 +18,7 @@ Setmemory((void *)N_head, 0, sizeof(list_t));
 N_head->numb = numb;
 if (str)
 {
-N_head->str = _strdup(str);
+N_head->str = DuplicateString(str);
 if (!N_head->str)
 {
 free(N_head);
@@ -49,7 +49,7 @@ Setmemory((void *)new_Node, 0, sizeof(list_t));
 new_Node->numb = numb;
 if (str)
 {
-new_Node->str = _strdup(str);
+new_Node->str = DuplicateString(str);
 if (!new_Node->str)
 {
 free(new_Node);
@@ -77,8 +77,8 @@ size_t PstringL(const list_t *head)
 size_t i = 0;
 for (; head; head = head->next)
 {
-_puts(head->str ? head->str : "(nil)");
-_puts("\n");
+PrintString(head->str ? head->str : "(nil)");
+PrintString("\n");
 i++;
 }
 return (i);

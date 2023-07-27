@@ -194,4 +194,15 @@ int WriteCharacter(char);
 char **splitstr(char *, char *);
 char **splitstr2(char *, char);
 
+int Chaindel(info_t *, char *, size_t *);
+void ChainStat(info_t *, char *, size_t *, size_t, size_t);
+int ReplaceAL(info_t *);
+int ReplaceVAR(info_t *);
+int ReplaceStr(char **, char *);
+
+int shell(info_t *, char **);
+int Fbuiltin(info_t *);
+void Fcommand(info_t *);
+void Forkthread(info_t *);
+
 #endif

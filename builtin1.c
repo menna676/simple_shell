@@ -60,10 +60,10 @@ if (Node)
 {
 s = StringCharac(Node->str, '=');
 for (al = Node->str; al <= s; al++)
-_putchar(*al);
-_putchar('\'');
-_puts(s + 1);
-_puts("'\n");
+WriteCharacter(*al);
+WriteCharacter('\'');
+PrintString(s + 1);
+PrintString("'\n");
 return (0);
 }
 return (1);

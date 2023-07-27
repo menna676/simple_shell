@@ -51,7 +51,7 @@ static char *buff;
 static size_t i, j, leng;
 ssize_t b = 0;
 char **buff_s = &(info->arg), *s;
-_putchar(Buff_flush);
+WriteCharacter(Buff_flush);
 b = BufferInput(info, &buff, &leng);
 if (b == -1)
 return (-1);
@@ -59,10 +59,10 @@ if (leng) /* comments still in buff */
 {
 j = i;
 s = buff + i;
-check_chain(info, buff, &j, i, leng);
+ChainStat(info, buff, &j, i, leng);
 while (j < leng)
 {
-if (is_chain(info, buff, &j))
+if (Chaindel(info, buff, &j))
 break;
 j++;
 }
@@ -141,7 +141,7 @@ return (p);
 */
 void handleSigint(__attribute__((unused)) int sig_numb)
 {
-_puts("\n"); /* print newline */
-_puts("$ "); /* print prompt */
-_putchar(Buff_flush); /* flush buffer */
+PrintString("\n"); /* print newline */
+PrintString("$ "); /* print prompt */
+WriteCharacter(Buff_flush); /* flush buffer */
 }

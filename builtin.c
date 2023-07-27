@@ -35,7 +35,7 @@ char *p, *dirc, buffer[1024];
 int chdir_ret;
 p = getcwd(buffer, 1024);
 if (!p)
-_puts(" TODO: >>getcwd failed emsg here<<\n");
+PrintString(" TODO: >>getcwd failed emsg here<<\n");
 if (!info->argv[1])
 {
 dirc = getenvironment(info, "HOME=");
@@ -49,12 +49,12 @@ else if (StringCompare(info->argv[1], "-") == 0)
 {
 if (!getenvironment(info, "OLDPWD="))
 {
-_puts(p);
-_putchar('\n');
+PrintString(p);
+WriteCharacter('\n');
 return (1);
 }
-_puts(getenvironment(info, "OLDPWD="));
-_putchar('\n');
+PrintString(getenvironment(info, "OLDPWD="));
+WriteCharacter('\n');
 chdir_ret = /* TODO: what is this supposed to be? */
 chdir((dirc = getenvironment(info, "OLDPWD=")) ? dirc : "/");
 }
@@ -81,8 +81,8 @@ int MyHelp(info_t *info)
 {
 char **arg_array;
 arg_array = info->argv;
-_puts("help function is called. function not implemented yet.\n");
+PrintString("help function is called. function not implemented yet.\n");
 if (0)
-_puts(*arg_array); /* Temporary workaround to avoid unused var warning */
+PrintString(*arg_array); /* Temporary work avoid unused var warning */
 return (0);
 }

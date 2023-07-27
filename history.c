@@ -14,7 +14,7 @@ buff = malloc(sizeof(char) * (StringLength(dir) + StringLength(Hist_Fi) + 2));
 if (!buff)
 return (NULL);
 buff[0] = 0;
-_strcpy(buff, dir);
+Stringcop(buff, dir);
 Stringcon(buff, "/");
 Stringcon(buff, Hist_Fi);
 return (buff);

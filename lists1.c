@@ -41,7 +41,7 @@ free(strings[j]);
 free(strings);
 return (NULL);
 }
-str = _strcpy(str, Node->str);
+str = Stringcop(str, Node->str);
 strings[i] = str;
 Node = Node->next;
 i++;
@@ -59,11 +59,11 @@ size_t printLinkedL(const list_t *head)
 size_t i;
 for (i = 0; head; head = head->next, i++)
 {
-_puts(Turnnumb(head->numb, 10, 0));
-_putchar(':');
-_putchar(' ');
-_puts(head->str ? head->str : "(nil)");
-_puts("\n");
+PrintString(Turnnumb(head->numb, 10, 0));
+WriteCharacter(':');
+WriteCharacter(' ');
+PrintString(head->str ? head->str : "(nil)");
+PrintString("\n");
 }
 return (i);
 }

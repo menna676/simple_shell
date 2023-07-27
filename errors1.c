@@ -53,15 +53,15 @@ errorprints(errorstring);
 */
 int printintfd(int input, int fid)
 {
-int (*__putchar)(char) = _putchar;
+int (*_WriteCharacter)(char) = WriteCharacter;
 int i, con = 0;
 unsigned int abs_value, current;
 if (fid == STDERR_FILENO)
-__putchar = errorprintchar;
+_WriteCharacter = errorprintchar;
 if (input < 0)
 {
 abs_value = -input;
-__putchar('-');
+_WriteCharacter('-');
 con++;
 }
 else
@@ -72,13 +72,13 @@ while (i > 1)
 {
 if (abs_value / i)
 {
-__putchar('0' + current / i);
+_WriteCharacter('0' + current / i);
 con++;
 }
 current %= i;
 i /= 10;
 }
-__putchar('0' + current);
+_WriteCharacter('0' + current);
 con++;
 return (con);
 }
