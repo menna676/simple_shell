@@ -68,24 +68,24 @@ struct liststr *next;
 */
 typedef struct passinfo
 {
-int readfd;
-int status;
-int linecount_flag;
-int cmd_buf_type;
-int histcount;
-int err_num;
-int argc;
-int env_changed;
-unsigned int line_count;
-char **cmd_buf;
-char *fname;
 char *arg;
-char **environ;
 char **argv;
 char *path;
-list_t *alias;
-list_t *history;
+int argc;
+unsigned int line_count;
+int err_num;
+int linecount_flag;
+char *fname;
 list_t *env;
+list_t *history;
+list_t *alias;
+char **environ;
+int env_changed;
+int status;
+char **cmd_buf;
+int cmd_buf_type;
+int readfd;
+int histcount;
 } info_t;
 
 #define INFO_INIT \

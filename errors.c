@@ -6,9 +6,10 @@
 */
 void errorprints(char *str)
 {
+int i;
 if (!str)
 return;
-for (int i = 0; str[i] != '\0'; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
 errorprintchar(str[i]);
 }
