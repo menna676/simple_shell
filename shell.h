@@ -205,4 +205,14 @@ int Fbuiltin(info_t *);
 void Fcommand(info_t *);
 void Forkthread(info_t *);
 
+int shell_exit(info_t *info);
+int shell_env(info_t *info);
+int shell_help(info_t *info);
+int shell_history(info_t *info);
+int shellSETEnviron(info_t *info);
+int shellUnSetEnviron(info_t *info);
+int shell_cd(info_t *info);
+int shell_alias(info_t *info);
+
+
 #endif
